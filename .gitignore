@@ -1,0 +1,28 @@
+# Ignore Sphinx build output
+docs/build/
+docs/_build/
+docs/build/*
+
+# Ignore LaTeX PDF output (optional)
+*.pdf
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.aux
+*.out
+*.toc
+
+# VS Code settings (if used)
+.vscode/
+
+# Python virtual environments (if any)
+venv/
+.env/
