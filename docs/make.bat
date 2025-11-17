@@ -26,6 +26,11 @@ if errorlevel 9009 (
 if "%1" == "" goto help
 
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
+
+REM Auto-copy HTML output to top-level docs/ folder (for GitHub Pages)
+if "%1" == "html" (
+	xcopy /E /Y /I "%BUILDDIR%\html\*" "%~dp0docs\"
+)
 goto end
 
 :help
