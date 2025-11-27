@@ -1,0 +1,27 @@
+site_name: Tool A Documentation
+
+theme:
+  name: material
+
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - Installation: install.md
+  - About: about.md
+  - API:
+    - API: api/api.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            show_submodules: true
+            show_root_heading: true
+            show_root_toc_entry: true
+            merge_init_into_class: true
+          paths: ["../src"]
